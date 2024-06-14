@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.api.tests.ApiDisposeTest">
+      <class name="com.qa.api.tests.CreateUserWithPOJOLombokTest">
         <methods>
-          <include name="disposeResponseTest"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="createUserTest"/>
         </methods>
-      </class> <!-- com.qa.api.tests.ApiDisposeTest -->
+      </class> <!-- com.qa.api.tests.CreateUserWithPOJOLombokTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

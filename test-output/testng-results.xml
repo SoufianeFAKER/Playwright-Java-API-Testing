@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-11T18:52:41 GMT+01:00" name="Default suite" finished-at="2024-06-11T18:52:48 GMT+01:00" duration-ms="7154">
+  <suite started-at="2024-06-14T17:12:36 GMT+01:00" name="Default suite" finished-at="2024-06-14T17:12:44 GMT+01:00" duration-ms="7561">
     <groups>
     </groups>
-    <test started-at="2024-06-11T18:52:41 GMT+01:00" name="Default test" finished-at="2024-06-11T18:52:48 GMT+01:00" duration-ms="7154">
-      <class name="com.qa.api.tests.CreateUserPostCallTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.api.tests.CreateUserPostCallTest@4ac3c60d]" started-at="2024-06-11T18:52:41 GMT+01:00" name="setup" finished-at="2024-06-11T18:52:45 GMT+01:00" duration-ms="4490" status="PASS">
+    <test started-at="2024-06-14T17:12:36 GMT+01:00" name="Default test" finished-at="2024-06-14T17:12:44 GMT+01:00" duration-ms="7561">
+      <class name="com.qa.api.tests.CreateUserWithPOJOLombokTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.api.tests.CreateUserWithPOJOLombokTest@15c43bd9]" started-at="2024-06-14T17:12:36 GMT+01:00" name="setup" finished-at="2024-06-14T17:12:42 GMT+01:00" duration-ms="5868" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createUserTest()[pri:0, instance:com.qa.api.tests.CreateUserPostCallTest@4ac3c60d]" started-at="2024-06-11T18:52:45 GMT+01:00" name="createUserTest" finished-at="2024-06-11T18:52:48 GMT+01:00" duration-ms="2619" status="PASS">
+        <test-method signature="createUserTest()[pri:0, instance:com.qa.api.tests.CreateUserWithPOJOLombokTest@15c43bd9]" started-at="2024-06-14T17:12:42 GMT+01:00" name="createUserTest" finished-at="2024-06-14T17:12:44 GMT+01:00" duration-ms="1637" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.api.tests.CreateUserPostCallTest@4ac3c60d]" started-at="2024-06-11T18:52:48 GMT+01:00" name="tearDown" finished-at="2024-06-11T18:52:48 GMT+01:00" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.api.tests.CreateUserWithPOJOLombokTest@15c43bd9]" started-at="2024-06-14T17:12:44 GMT+01:00" name="tearDown" finished-at="2024-06-14T17:12:44 GMT+01:00" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.api.tests.CreateUserPostCallTest -->
+      </class> <!-- com.qa.api.tests.CreateUserWithPOJOLombokTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
