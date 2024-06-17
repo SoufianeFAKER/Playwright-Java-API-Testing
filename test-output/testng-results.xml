@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-14T17:12:36 GMT+01:00" name="Default suite" finished-at="2024-06-14T17:12:44 GMT+01:00" duration-ms="7561">
+  <suite started-at="2024-06-17T11:42:34 GMT+01:00" name="Default suite" finished-at="2024-06-17T11:42:40 GMT+01:00" duration-ms="6374">
     <groups>
     </groups>
-    <test started-at="2024-06-14T17:12:36 GMT+01:00" name="Default test" finished-at="2024-06-14T17:12:44 GMT+01:00" duration-ms="7561">
-      <class name="com.qa.api.tests.CreateUserWithPOJOLombokTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.api.tests.CreateUserWithPOJOLombokTest@15c43bd9]" started-at="2024-06-14T17:12:36 GMT+01:00" name="setup" finished-at="2024-06-14T17:12:42 GMT+01:00" duration-ms="5868" status="PASS">
+    <test started-at="2024-06-17T11:42:34 GMT+01:00" name="Default test" finished-at="2024-06-17T11:42:40 GMT+01:00" duration-ms="6374">
+      <class name="com.qa.api.booking.UpdateAndDeleteBookingTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.api.booking.UpdateAndDeleteBookingTest@15c43bd9]" started-at="2024-06-17T11:42:34 GMT+01:00" name="setup" finished-at="2024-06-17T11:42:39 GMT+01:00" duration-ms="5161" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createUserTest()[pri:0, instance:com.qa.api.tests.CreateUserWithPOJOLombokTest@15c43bd9]" started-at="2024-06-14T17:12:42 GMT+01:00" name="createUserTest" finished-at="2024-06-14T17:12:44 GMT+01:00" duration-ms="1637" status="PASS">
+        <test-method signature="deleteBookingTest()[pri:0, instance:com.qa.api.booking.UpdateAndDeleteBookingTest@15c43bd9]" started-at="2024-06-17T11:42:39 GMT+01:00" name="deleteBookingTest" finished-at="2024-06-17T11:42:40 GMT+01:00" duration-ms="585" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.api.tests.CreateUserWithPOJOLombokTest@15c43bd9]" started-at="2024-06-14T17:12:44 GMT+01:00" name="tearDown" finished-at="2024-06-14T17:12:44 GMT+01:00" duration-ms="14" status="PASS">
+        </test-method> <!-- deleteBookingTest -->
+        <test-method signature="updateBookingTest()[pri:0, instance:com.qa.api.booking.UpdateAndDeleteBookingTest@15c43bd9]" started-at="2024-06-17T11:42:40 GMT+01:00" name="updateBookingTest" finished-at="2024-06-17T11:42:40 GMT+01:00" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBookingTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.api.booking.UpdateAndDeleteBookingTest@15c43bd9]" started-at="2024-06-17T11:42:40 GMT+01:00" name="tearDown" finished-at="2024-06-17T11:42:40 GMT+01:00" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.api.tests.CreateUserWithPOJOLombokTest -->
+      </class> <!-- com.qa.api.booking.UpdateAndDeleteBookingTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

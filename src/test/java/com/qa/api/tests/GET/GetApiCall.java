@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.tests.GET;
 
 import java.io.IOException;
 import java.util.Map;
@@ -51,8 +51,8 @@ public class GetApiCall {
 		Assert.assertEquals(statusCode, 200);
 		Assert.assertEquals(apiResponse.ok(), true);
 
-		String statusText = apiResponse.statusText();
-		System.out.println(statusText);
+		String statusResText = apiResponse.statusText();
+		System.out.println(statusResText);
 
 		System.out.println("------ print API response with plain text ------");
 		System.out.println(apiResponse.text());

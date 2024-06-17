@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.tests.POST;
 
 import java.io.IOException;
 
@@ -13,10 +13,9 @@ import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.RequestOptions;
-import com.qa.api.data.Users;
+import com.qa.api.data.User;
 
-
-public class CreateUserWithPOJOLombokTest {
+public class CreateUserWithPOJOTest {
 	
 	Playwright playwright;
 	APIRequest request;
@@ -49,22 +48,15 @@ public class CreateUserWithPOJOLombokTest {
 	@Test
 	public void createUserTest() throws IOException {
 		
-		//create users Object: using builder pattern:
-		
-		Users users = Users.builder()
-				.name("Anes Auromation")
-				.email(getRandomEmail())
-				.gender("male")
-				.status("active")
-				.build();
-		
+		//create user Object:
+		User user = new User("Hiba", getRandomEmail(), "female", "active");
 		
 		//POST Call: create a user
 		APIResponse apiPostResponse = requestContext.post("https://gorest.co.in/public/v2/users",
 				RequestOptions.create()
 					.setHeader("Content-Type", "application/json")
 					.setHeader("Authorization", "Bearer b07b6f98caa81ae878fce96eda234bdf598939ef72ba5ab8998b20e500ea2af8")
-					.setData(users)					
+					.setData(user)					
 				);
 		
 		System.out.println(apiPostResponse.status());
@@ -76,15 +68,15 @@ public class CreateUserWithPOJOLombokTest {
 		
 		//convert response text/json to POJO -- deserialization
 		ObjectMapper objectMapper = new ObjectMapper();
-		Users actualUser = objectMapper.readValue(responseText, Users.class); 
+		User actualUser = objectMapper.readValue(responseText, User.class); 
 		
 		System.out.println("actual user from the response ------>");
 		System.out.println(actualUser);
 		
-		Assert.assertEquals(actualUser.getName(), users.getName());
-		Assert.assertEquals(actualUser.getEmail(), users.getEmail());
-		Assert.assertEquals(actualUser.getStatus(), users.getStatus());
-		Assert.assertEquals(actualUser.getGender(), users.getGender());
+		Assert.assertEquals(actualUser.getName(), user.getName());
+		Assert.assertEquals(actualUser.getEmail(), user.getEmail());
+		Assert.assertEquals(actualUser.getStatus(), user.getStatus());
+		Assert.assertEquals(actualUser.getGender(), user.getGender());
 		
 		Assert.assertNotNull(actualUser.getId());
 		

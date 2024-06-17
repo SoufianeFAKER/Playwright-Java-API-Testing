@@ -1,8 +1,6 @@
-package com.qa.api.tests;
+package com.qa.api.tests.POST;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -17,7 +15,7 @@ import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.RequestOptions;
 
-public class CreateUserWithJsonFile {
+public class CreateUserWithJsonStringTest {
 	
 	Playwright playwright;
 	APIRequest request;
@@ -50,17 +48,20 @@ public class CreateUserWithJsonFile {
 	@Test
 	public void createUserTest() throws IOException {
 		
-		//get Json file:
-		byte[] fileBytes = null;
-		File file = new File("src/test/resources/data/user.json");
-		fileBytes = Files.readAllBytes(file.toPath());
+		//String Json:
+		String reqJsonBody = " {\r\n"
+				+ "        \"name\": \"testingAPI\",\r\n"
+				+ "        \"email\": \"testingpw@gmail.com\",\r\n"
+				+ "        \"gender\": \"male\",\r\n"
+				+ "        \"status\": \"active\"\r\n"
+				+ "    }";
 		
 		//POST Call: create a user
 		APIResponse apiPostResponse = requestContext.post("https://gorest.co.in/public/v2/users",
 				RequestOptions.create()
 					.setHeader("Content-Type", "application/json")
 					.setHeader("Authorization", "Bearer b07b6f98caa81ae878fce96eda234bdf598939ef72ba5ab8998b20e500ea2af8")
-					.setData(fileBytes)					
+					.setData(reqJsonBody)					
 				);
 		
 		System.out.println(apiPostResponse.status());
@@ -92,10 +93,11 @@ public class CreateUserWithJsonFile {
 		
 		System.out.println(apiGetResponse.text());
 		Assert.assertTrue(apiGetResponse.text().contains(userId));
-		Assert.assertTrue(apiGetResponse.text().contains("test QA API"));
+		Assert.assertTrue(apiGetResponse.text().contains("testingAPI"));
 		
 //		Assert.assertTrue(apiGetResponse.text().contains(emailId));
 		
 	}
+
 
 }

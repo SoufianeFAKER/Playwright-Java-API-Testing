@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.tests.GET;
 
 import java.util.List;
 import java.util.Map;

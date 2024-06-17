@@ -1,4 +1,4 @@
-package com.qa.api.tests;
+package com.qa.api.tests.POST;
 
 import java.io.IOException;
 import java.util.HashMap;

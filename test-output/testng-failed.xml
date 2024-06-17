@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.api.tests.CreateUserWithPOJOLombokTest">
+      <class name="com.qa.api.booking.UpdateAndDeleteBookingTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setup"/>
-          <include name="createUserTest"/>
+          <include name="deleteBookingTest"/>
+          <include name="tearDown"/>
+          <include name="updateBookingTest"/>
         </methods>
-      </class> <!-- com.qa.api.tests.CreateUserWithPOJOLombokTest -->
+      </class> <!-- com.qa.api.booking.UpdateAndDeleteBookingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
